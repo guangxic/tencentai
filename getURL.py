@@ -61,11 +61,11 @@ def meaning_url(sentence):
 if __name__ == '__main__':
 	text = u'原告凌××为与被告张××民间借贷纠纷一案，于2009年2月4日向本院起诉。本院于同日受理后，依法由审判员孙涛独任审理，于2009年2月27日公开开庭进行了审理。原告凌××的委托代理人沈××到庭参加诉讼。被告张××经本院合法传唤，无正当理由拒不到庭。本案现已审理终结。'
 
-	# r = requests.get(pos_url(text))
-	# data = json.loads(r.text)
-	# print(data)
-
-	print(meaning_url(text))
-	r = requests.get(meaning_url(text))
+	r = requests.get(pos_url(text))
 	data = json.loads(r.text)
 	print(data)
+
+	# print(meaning_url(text))
+	# r = requests.get(meaning_url(text))
+	# data = json.loads(r.text)
+	# print(data)
